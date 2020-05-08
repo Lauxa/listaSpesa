@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat&family=Dancing+Script&display=swap");
+
+body {
+  background-color: #994433;
+  font-size: 16px;
+}
+.App {
+  font-family: sans-serif;
+}
+/*button {
+  appearance: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+}*/
+h1 { 
+  color: #fff;
+}
+h1,
+h2 {
+  font-family: "Dancing Script", cursive;
+}
+h1 {
+  > * {
+    font-family: "Caveat", cursive;
+    font-size: 20px;
+    background-color: #E9D4BA;
+    color: #000;
+    border-radius: 4px;
+    padding: 5px;
+    
+    &:after {
+      content: '';
+      display: inline-block;
+      width: 5px;
+    }
+  }
+}
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+input:not([type='checkbox']) {
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px inset #c7c7c7;
+  margin: 0 5px;
+  font-size: 16px;
+
+  &[type="number"]::-webkit-inner-spin-button {
+    display: none;
+  }
+}
+
+.shopList {
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    max-width: 90vw;
+    position: relative;
+
+    &--shopped {
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 50%;
+        width: 100%;
+        border-bottom: 1px solid #999;
+      }
+    }
+  }
+  &__identify {
+    flex: 1 1 (100% / 4);
+    
+    &:last-child {
+      flex-grow: 0;
+      margin-left: auto;
+    }
+  }
+  &__input {
+    max-width: calc(100%/6);
+    flex-shrink: 1;
+    display: flex;
+
+    input {
+      width: auto;
+      max-width: 50%;
+      margin-left: 0;
+    }
+  }
+}
+
+.snippet-window {
+  $card-bg: #f5ebd6;
+  background-color: $card-bg;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 2px 3px 3px 0 darken($color: $card-bg, $amount: 60%);
+
+  & + & {
+    margin-top: 10px;
+  }
+}
+:root {
+  --summary-color: #D9897A;
+}
+.summary {
+  display: flex;
+  align-content: stretch;
+
+  &_item {
+    padding: 5px;
+    border-radius: 5px;
+    background-color: var(--summary-color);
+    color: #fff;
+    position: relative;
+    display: flex; 
+    margin-right: 8px;
+
+    &:last-child {
+    margin-right: 14px;
+    }
+/*
+    &:after {
+      content: '';
+      border-top: 14px solid transparent;
+      border-bottom: 14px solid transparent;
+      border-left: 14px solid var(--summary-color);
+      display: inline-block;
+      position: absolute;
+      left: 100%;
+      top: 0;
+      bottom: 0;
+      
+    }
+*/
+    &--wallet {
+      --summary-color: #50313E;
+      margin-left: auto;
+    }
+  }
+}
+

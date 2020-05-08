@@ -1,2 +1,0 @@
-# listaSpesa
-Created with CodeSandbox
