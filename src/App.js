@@ -88,6 +88,7 @@ export default function App() {
   total = Number.isInteger(total) ? total : total.toFixed(2);
   const ticketS = Math.trunc(total / tValue);
   const ticketV = ticketS * tValue;
+  const cash = (total - ticketV).toFixed(2);
 
   return (
     <div className="App">
@@ -153,12 +154,8 @@ export default function App() {
           </span>
         </p>
         <p className="summary">
-          <span className="summary_item">
-            contanti:{(total - ticketV).toFixed(2)}
-          </span>
-          <span className="summary_item">
-            ad altro buono: {tValue} - contanti
-          </span>
+          <span className="summary_item">contanti:{cash}</span>
+          <span className="summary_item">ad altro buono: {tValue - cash}</span>
           <span className="summary_item summary_item--wallet">
             totale buoni residui: {ticket - ticketS}
           </span>
