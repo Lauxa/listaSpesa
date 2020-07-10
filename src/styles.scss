@@ -146,3 +146,11 @@ input:not([type='checkbox']) {
   }
 }
 
+button {
+  appearance: none;
+  border: none;
+  background-color: transparent;
+  background-image: linear-gradient(rgba(158, 158, 158, 0.3), rgba(158, 158, 158, 0.3));
+  border-radius: 4px;
+  padding: 5px;
+}
